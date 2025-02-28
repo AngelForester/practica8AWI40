@@ -51,14 +51,7 @@ def asistencias():
         con.reconnect()
 
     cursor = con.cursor(dictionary=True)
-    sql    = """
-    SELECT  `idAsistencia`,
-    	    `empleado`,
-            `reporte`,
-            `reporte`
-    FROM `vistatotal`
-    LIMIT 10 OFFSET 0
-    """
+    sql    = "SELECT  `idAsistencia`, `empleado`, `reporte`, `reporte` FROM `vistatotal LIMIT 10 OFFSET 0"
 
     cursor.execute(sql)
     registros = cursor.fetchall()
@@ -70,25 +63,17 @@ def empleados():
         con.reconnect()
 
     cursor = con.cursor(dictionary=True)
-    sql    = """
-    SELECT `idEmpleado`, 
-            `nombreEmpleado`, 
-            `numero`, 
-            `fechaIngreso` 
-    FROM empleados 
-    LIMIT 10 OFFSET 0
-    """
+    sql    = "SELECT `idEmpleado`, `nombreEmpleado`, `numero`, `fechaIngreso` FROM empleados LIMIT 10 OFFSET 0"
 
     cursor.execute(sql)
     registros = cursor.fetchall()
 
     # Si manejas fechas y horas
-    """
     for registro in registros:
         fecha_hora = registro["fechaIngreso"]
 
         registro["Fecha_Hora"] = fecha_hora.strftime("%Y-%m-%d %H:%M:%S")
-    """
+
 
     return render_template("empleados.html", empleados=registros)
 
@@ -98,23 +83,15 @@ def reportes():
         con.reconnect()
 
     cursor = con.cursor(dictionary=True)
-    sql    = """
-    SELECT `idReporte`,
-		    `fecha`,
-            `comentarios`
-    FROM `reportes`
-    LIMIT 10 OFFSET 0
-    """
+    sql    = "SELECT `idReporte`, `fecha`, `comentarios` FROM `reportes` LIMIT 10 OFFSET 0"
 
     cursor.execute(sql)
     registros = cursor.fetchall()
 
     # Si manejas fechas y horas
-    """
     for registro in registros:
         fecha_hora = registro["fecha"]
 
         registro["Fecha"]      = fecha_hora.strftime("%d/%m/%Y")
-    """
 
     return render_template("reportes.html", reportes=registros)

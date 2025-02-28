@@ -51,7 +51,7 @@ def asistencias():
         con.reconnect()
 
     cursor = con.cursor(dictionary=True)
-    sql    = "SELECT  `idAsistencia`, `empleado`, `reporte`, `reporte` FROM `vistatotal LIMIT 10 OFFSET 0"
+    sql    = "SELECT  `idAsistencia`, `empleado`, `reporte`, `reporte` FROM `vistatotal` LIMIT 10 OFFSET 0"
 
     cursor.execute(sql)
     registros = cursor.fetchall()

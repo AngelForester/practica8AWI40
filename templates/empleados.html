@@ -10,13 +10,13 @@
         </tr>
     </thead>
     <tbody>
-        <!-- ng-repeat, solo cambiar el nombre  -->
-        <tr ng-repeat="x in empleados">
-            <td scope="col">{{ x.idEmpleado }}</td>
-            <td scope="col">{{ x.nombreEmpleado }}</td>
-            <td scope="col">{{ x.numero }}</td>
-            <td scope="col">{{ x.fechaIngreso }}</td>
-            <td scope="col"></td>
+        {% for x in empleados %}
+        <tr>
+            <td>{{ x.idEmpleado }}</td>
+            <td>{{ x.nombreEmpleado }}</td>
+            <td>{{ x.numero }}</td>
+            <td>{{ x.fechaIngreso }}</td>
         </tr>
+        {% endfor %}
     </tbody>
 </table>

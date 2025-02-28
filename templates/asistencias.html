@@ -1,0 +1,20 @@
+<table class="table table-sm">
+    <thead class="table-active">
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>reporte</th>
+            <th>estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="x in asistencias">
+            <td scope="col">{{ x.idAsistencia }}</td>
+            <td scope="col">{{ x.empleado }}</td>
+            <td scope="col">{{ x.reporte }}</td>
+            <td scope="col">{{ x.estado }}</td>
+            <td scope="col"></td>
+        </tr>
+    </tbody>
+</table>

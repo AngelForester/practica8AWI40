@@ -63,7 +63,7 @@ def productos():
     cursor.execute(sql)
     registros = cursor.fetchall()
 
-    return render_template("asistencias.html", alumnos=registros)
+    return render_template("asistencias.html", asistencias=registros)
 @app.route("/empleados")
 def productos():
     if not con.is_connected():

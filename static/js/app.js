@@ -19,7 +19,7 @@ app.config(function ($routeProvider, $locationProvider) {
         templateUrl: "/app",
         controller: "appCtrl"
     })
-    .when("/asistenciass", {
+    .when("/asistencias", {
         templateUrl: "/asistencias",
         controller: "asistenciasCtrl"
     })

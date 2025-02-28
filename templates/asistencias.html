@@ -9,12 +9,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="x in asistencias">
-            <td scope="col">{{ x.idAsistencia }}</td>
-            <td scope="col">{{ x.empleado }}</td>
-            <td scope="col">{{ x.reporte }}</td>
-            <td scope="col">{{ x.estado }}</td>
-            <td scope="col"></td>
+        {% for x in empleados %}
+        <tr>
+            <td>{{ x.idAsistencia }}</td>
+            <td>{{ x.empleado }}</td>
+            <td>{{ x.reporte }}</td>
+            <td>{{ x.estado }}</td>
         </tr>
+        {% endfor %}
     </tbody>
 </table>

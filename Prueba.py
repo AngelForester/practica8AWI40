@@ -6,7 +6,6 @@ db_config = {
     "user": os.getenv("u861594054_Misael2009"),
     "password": os.getenv("NZqhQyiNZ3Tg8JJ"),
     "database": os.getenv("u861594054_app9"),
-    "port": 3306
 }
 
 try:

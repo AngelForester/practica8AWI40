@@ -24,7 +24,7 @@ app.config(function ($routeProvider, $locationProvider) {
         controller: "asistenciasCtrl"
     })
     .when("/empleados", {
-        templateUrl: "/empleado",
+        templateUrl: "/empleados",
         controller: "empleadoCtrl"
     })
     .when("/reportes", {

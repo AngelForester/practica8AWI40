@@ -2,10 +2,10 @@ import mysql.connector
 import os
 
 db_config = {
-    "host": os.getenv("DB_HOST", "localhost"),
-    "user": os.getenv("DB_USER", "root"),
-    "password": os.getenv("DB_PASS", ""),
-    "database": os.getenv("DB_NAME", "mi_bd"),
+    "host": os.getenv("82.197.82.90"),
+    "user": os.getenv("u861594054_Misael2009"),
+    "password": os.getenv("NZqhQyiNZ3Tg8JJ"),
+    "database": os.getenv("u861594054_app9"),
     "port": 3306
 }
 

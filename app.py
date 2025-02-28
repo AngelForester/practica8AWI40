@@ -46,7 +46,7 @@ def app2():
     return "<h5>Hola, soy la view app</h5>"
 
 @app.route("/asistencias")
-def productos():
+def asistencias():
     if not con.is_connected():
         con.reconnect()
 
@@ -65,7 +65,7 @@ def productos():
 
     return render_template("asistencias.html", asistencias=registros)
 @app.route("/empleados")
-def productos():
+def empleados():
     if not con.is_connected():
         con.reconnect()
 
@@ -93,7 +93,7 @@ def productos():
     return render_template("empleados.html", empleados=registros)
 
 @app.route("/reportes")
-def productos():
+def reportes():
     if not con.is_connected():
         con.reconnect()
 

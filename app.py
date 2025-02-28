@@ -52,8 +52,8 @@ def productos():
 
     cursor = con.cursor(dictionary=True)
     sql    = """
-    SELECT 	`idAsistencia`,
-    		`empleado`,
+    SELECT  `idAsistencia`,
+    	    `empleado`,
             `reporte`,
             `reporte`
     FROM `vistatotal`
@@ -63,7 +63,7 @@ def productos():
     cursor.execute(sql)
     registros = cursor.fetchall()
 
-    return render_template("asistencias.html", productos=registros)
+    return render_template("asistencias.html", alumnos=registros)
 @app.route("/empleados")
 def productos():
     if not con.is_connected():
@@ -90,7 +90,7 @@ def productos():
         registro["Fecha_Hora"] = fecha_hora.strftime("%Y-%m-%d %H:%M:%S")
     """
 
-    return render_template("empleados.html", productos=registros)
+    return render_template("empleados.html", empleados=registros)
 
 @app.route("/reportes")
 def productos():
@@ -117,4 +117,4 @@ def productos():
         registro["Fecha"]      = fecha_hora.strftime("%d/%m/%Y")
     """
 
-    return render_template("reportes.html", productos=registros)
+    return render_template("reportes.html", reportes=registros)
